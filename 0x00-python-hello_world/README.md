@@ -1,2 +1,3 @@
 Task 0: Run Python file
-Task 2: Run inline
+Task 1: Run inline
+Task 2: Hello, print
