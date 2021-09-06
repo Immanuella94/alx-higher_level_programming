@@ -4,3 +4,4 @@ Task 2: Hello, print
 Task 3: Print integer
 Task 4: Print float
 Task 5: Print string
+Task 6: Play with strings
