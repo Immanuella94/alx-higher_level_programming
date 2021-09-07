@@ -13,5 +13,8 @@
 <li>Task 10: adds two integers</li>
 <li>Task 11: power</li>
 <li>Task 12: prints numbers and FizzBuzz</li>
-<li>Taskk 13; Insert in sorted linked list</li>
+<li>Task 13: Insert in sorted linked list</li>
+<li>Task 14: prints ASCII alphabetin revese alternating lower and uppercase</li>
+<li>Task 15: remove at given position</li>
+<li>Task 16: ByteCode->Python #2</li>
 </ol>
