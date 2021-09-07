@@ -1,14 +1,16 @@
-Task 0: Run Python file
-Task 1: Run inline
-Task 2: Hello, print
-Task 3: Print integer
-Task 4: Print float
-Task 5: Print string
-Task 6: Play with strings
-Task 7: Copy -Cut -Paste
-Task 8: Create a new sentence
-Task 9: Easter Egg
-Task 10: Linked list cycle
-Task 11: Hello, write
-Task 12: Compile
-Task 13: ByteCode-> Python #1
+<ol>
+<li>Task 0: Run Python file</li>
+<li>Task 1: Run inline</li>
+<li>Task 2: Hello, print</li>
+<li>Task 3: Print integer</li>
+<li>Task 4: Print float</li>
+<li>Task 5: Print string</li>
+<li>Task 6: Play with strings</li>
+<li>Task 7: Copy -Cut -Paste</li>
+<li>Task 8: Create a new sentence</li>
+<li>Task 9: Easter Egg</li>
+<li>Task 10: Linked list cycle</li>
+<li>Task 11: Hello, write</li>
+<li>Task 12: Compile</li>
+<li>Task 13: ByteCode-> Python #1</li>
+</ol>
