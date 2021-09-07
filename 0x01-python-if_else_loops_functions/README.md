@@ -11,4 +11,5 @@
 <li>Task 8: prints string in uppercase</li>
 <li>Task 9: prints last digit of a number</li>
 <li>Task 10: adds two integers</li>
+<li>Task 11: power</li>
 </ol>
