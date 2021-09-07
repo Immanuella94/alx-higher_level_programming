@@ -8,4 +8,5 @@
 <li>Task 5: prints numbers</li>
 <li>Task 6: prints number combinations of two numbers</li>
 <li>Task 7: checks if lowercase</li>
+<li>Task 8: prints string in uppercase</li>
 </ol>
