@@ -7,4 +7,5 @@
 <li>Task 4: prints decimal and hexadecimal of number</li>
 <li>Task 5: prints numbers</li>
 <li>Task 6: prints number combinations of two numbers</li>
+<li>Task 7: checks if lowercase</li>
 </ol>
