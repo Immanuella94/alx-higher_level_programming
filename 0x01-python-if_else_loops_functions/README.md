@@ -9,4 +9,5 @@
 <li>Task 6: prints number combinations of two numbers</li>
 <li>Task 7: checks if lowercase</li>
 <li>Task 8: prints string in uppercase</li>
+<li>Task 9: prints last digit of a number</li>
 </ol>
