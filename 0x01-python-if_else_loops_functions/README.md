@@ -6,4 +6,5 @@
 <li>Task 3: printsASCII lowercase alphabet on one line, except for 'q' & 'e'</li>
 <li>Task 4: prints decimal and hexadecimal of number</li>
 <li>Task 5: prints numbers</li>
+<li>Task 6: prints number combinations of two numbers</li>
 </ol>
