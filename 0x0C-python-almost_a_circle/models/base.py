@@ -31,8 +31,10 @@ class Base:
         '''returns the Json string reprisentaion
         of the argument list_dictionaries
         '''
-        if list_dictionaries is None or len(list_dictionaries) <= 0:
-            return "[]"
+        if list_dictionaries is None or list_dictionaries == []:
+            return []
+        if len(list_dictionaries) <= 0:
+            return []
         return json.dumps(list_dictionaries)
 
     @staticmethod
@@ -134,8 +136,10 @@ class Base:
         '''writes the JSON string representation of list_objs to a file'''
         if cls.__name__ == 'Rectangle':
             file_name = 'Rectangle.json'
-        else:
+        elif cls.__name__ == 'Square':
             file_name = 'Square.json'
+        else:
+            return
 
         if list_objs is None:
             list_objs = []
@@ -152,8 +156,11 @@ class Base:
         '''creates new object of type cls and
         initialized with values in dictionary
         '''
+        # check who is calling
+        if cls.__name__ == 'Base':
+            return
         # creating dummy instance
-        new_obj = cls(1, 1, 1, 1)
+        new_obj = cls(1, 1)
         # updating it using the update method
         new_obj.update(**dictionary)
         return new_obj
@@ -163,10 +170,13 @@ class Base:
         '''returns a list of instances from the json file depends on the cls'''
         if cls.__name__ == 'Rectangle':
             file_name = 'Rectangle.json'
-        else:
+        elif cls.__name__ == 'Square':
             file_name = 'Square.json'
+        else:
+            return
 
-        if not path.exists(file_name) and not path.isfile(file_name):
+        # if dosen't exist or is not a file return empty list
+        if not path.exists(file_name) or not path.isfile(file_name):
             return []
 
         with open(file_name, mode='r', encoding='utf-8')as file:
@@ -186,10 +196,15 @@ class Base:
         '''
         if cls.__name__ == 'Rectangle':
             file_name = 'Rectangle.csv'
-        else:
+        elif cls.__name__ == 'Square':
             file_name = 'Square.csv'
+        else:
+            return
 
-        list_dicts = [obj.to_dictionary() for obj in list_objs]
+        if list_objs is not None:
+            list_dicts = [obj.to_dictionary() for obj in list_objs]
+        else:
+            list_dicts = []
 
         with open(file_name, mode='w', encoding='utf-8') as file:
             if file_name == 'Rectangle.csv':
@@ -206,15 +221,20 @@ class Base:
     @classmethod
     def load_from_file_csv(cls):
         '''loads data from csv file
-        and return a list or objects depends on the filename.
+        and return a list of objects depends on the filename.
         custom csv deserializer
         '''
         if cls.__name__ == 'Rectangle':
             file_name = 'Rectangle.csv'
-        else:
+        elif cls.__name__ == 'Square':
             file_name = 'Square.csv'
+        else:
+            return
 
         list_dicts = []
+        # if dosen't exist or is not a file return empty list
+        if not path.exists(file_name) or not path.isfile(file_name):
+            return []
         with open(file_name, mode='r', encoding='utf-8') as file:
             csv_reader = csv.DictReader(file, delimiter=',')
 
@@ -232,6 +252,7 @@ class Base:
         for d in list_dicts:
             new_obj = cls.create(**d)
             list_objs.append(new_obj)
+
         return list_objs
 
     @classmethod
